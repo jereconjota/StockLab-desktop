@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+    <class name="modelo.Factura" table="factura">
+        <id name="idFactura" type="java.lang.Integer">
+            <column name="Id_Factura" />
+            <generator class="increment" />
+        </id>
+        <property name="nroFactura" type="string">
+            <column name="Nro_Factura" length="45" />
+        </property>
+        <property name="fechaFactura" type="date">
+            <column name="Fecha_Factura" length="10" />
+        </property>
+        <property name="tipoFactura" type="string">
+            <column name="Tipo_Factura" length="45" />
+        </property>
+        <property name="fechaCarga" type="date">
+            <column name="Fecha_Carga" length="10" />
+        </property>
+        <property name="observacionFactura" type="string">
+            <column name="Observacion_Factura" length="256" />
+        </property>
+        <property name="tieneRemito" type="string">
+            <column name="TieneRemito" length="45" />
+        </property>
+        <property name="estadoFactura" type="string">
+            <column name="Estado_Factura" length="45" />
+        </property>
+        <set name="detalleFacturas" table="detalle_factura" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FK_Id_Factura" not-null="true" />
+            </key>
+            <one-to-many class="modelo.DetalleFactura" />
+        </set>
+        <set name="remitos" table="remito" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FK_Id_Factura" />
+            </key>
+            <one-to-many class="modelo.Remito" />
+        </set>
+    </class>
+</hibernate-mapping>

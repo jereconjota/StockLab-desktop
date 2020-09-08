@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+    <class name="modelo.DetalleFactura" table="detalle_factura">
+        <composite-id name="id" class="modelo.DetalleFacturaId">
+            <key-property name="pkNumDetalle" type="int">
+                <column name="PK_Num_Detalle" />
+            </key-property>
+            <key-property name="fkIdFactura" type="int">
+                <column name="FK_Id_Factura" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="factura" class="modelo.Factura" update="false" insert="false" fetch="select">
+            <column name="FK_Id_Factura" not-null="true" />
+        </many-to-one>
+        <many-to-one name="insumo" class="modelo.Insumo" fetch="select">
+            <column name="FK_Id_Insumo" not-null="true" />
+        </many-to-one>
+        <many-to-one name="proveedor" class="modelo.Proveedor" fetch="select">
+            <column name="FK_Id_Proveedor" not-null="true" />
+        </many-to-one>
+        <many-to-one name="remito" class="modelo.Remito" fetch="select">
+            <column name="FK_Id_Remito" />
+        </many-to-one>
+        <property name="cantidad" type="java.lang.Integer">
+            <column name="Cantidad" />
+        </property>
+        <property name="precio" type="java.lang.Float">
+            <column name="Precio" precision="12" scale="0" />
+        </property>
+        <property name="importe" type="java.lang.Float">
+            <column name="Importe" precision="12" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

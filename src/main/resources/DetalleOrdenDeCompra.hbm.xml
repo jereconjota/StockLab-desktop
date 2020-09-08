@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+	<class name="modelo.DetalleOrdenDeCompra" table="detalle_orden_de_compra">
+    	<composite-id name="id" class="modelo.DetalleOrdenDeCompraId">
+            <key-property name="pkNumDetalle" type="int">
+                <column name="PK_Num_Detalle" />
+            </key-property>
+            <key-property name="fkIdOrdenCompra" type="int">
+                <column name="FK_Id_OrdenCompra" />
+            </key-property>
+        </composite-id>
+        
+        <many-to-one name="ordenDeCompra" class="modelo.OrdenDeCompra" update="false" insert="false" fetch="select">
+            <column name="FK_Id_OrdenCompra" not-null="true" />
+        </many-to-one>
+        <many-to-one name="insumo" class="modelo.Insumo" fetch="select">
+            <column name="FK_Id_Insumo" not-null="true" />
+        </many-to-one>
+        <property name="cantidad" type="java.lang.Integer">
+            <column name="Cantidad" />
+        </property>
+        <property name="precio" type="string">
+            <column name="Precio" length="45" />
+        </property>
+        <property name="observacion" type="string">
+            <column name="Observacion" length="45" />
+        </property>
+        <property name="unidades" type="java.lang.Integer">
+            <column name="Unidades" />
+        </property>
+            
+    </class>
+</hibernate-mapping>

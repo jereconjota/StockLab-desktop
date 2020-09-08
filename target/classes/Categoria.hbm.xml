@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+	<class name="modelo.Categoria" table="categoria">
+    	<id name="pkIdCategoria" type="java.lang.Integer">
+            <column name="PK_Id_Categoria" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="sector" class="modelo.Sector" fetch="select">
+            <column name="FK_Id_Sector" not-null="true" />
+        </many-to-one>
+        <property name="nombreCategoria" type="string">
+            <column name="Nombre_Categoria" length="45" not-null="true" />
+        </property>
+        <property name="fechaAlta" type="date">
+            <column name="Fecha_Alta" length="10" />
+        </property>
+        <property name="fechaBaja" type="date">
+            <column name="Fecha_Baja" length="10" />
+        </property>
+        <property name="estadoCategoria" type="string">
+            <column name="Estado_Categoria" length="45" />
+        </property>
+        <set name="insumos" table="insumo" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FK_Id_Categoria" not-null="true" />
+            </key>
+            <one-to-many class="modelo.Insumo" />
+        </set>    
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane fx:id="borderPaneVencidos" prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorIVistaVencidos">
+   <top>
+      <BorderPane prefHeight="60.0" prefWidth="381.0" BorderPane.alignment="CENTER">
+         <left>
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="702.0" BorderPane.alignment="CENTER_LEFT">
+               <children>
+                  <ImageView fx:id="logo" fitHeight="43.0" fitWidth="195.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <JFXComboBox fx:id="comboBoxSector" focusColor="#0098cd" onAction="#filtroSector" prefHeight="25.0" prefWidth="210.0" promptText="SECTOR" />
+                  <JFXTextField fx:id="textFieldBuscar" focusColor="#0098cd" onKeyReleased="#filtrarPorCoincidencias" onMouseClicked="#manejadorObList" prefHeight="25.0" prefWidth="210.0" promptText="Nombre de insumo">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin></JFXTextField>
+               </children>
+               <BorderPane.margin>
+                  <Insets right="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </left>
+         <right>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="btnLimpiarFiltros" onAction="#limpiarFiltros" prefHeight="45.0" prefWidth="75.0" style="-fx-background-color: #0098cd;" text="Limpiar&#10;filtro" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnExportarExcel" onAction="#exportarExcel" prefHeight="45.0" prefWidth="75.0" style="-fx-background-color: #0098cd;" text="Exportar" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </right>
+      </BorderPane>
+   </top>
+   <center>
+      <BorderPane fx:id="borderTabla" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

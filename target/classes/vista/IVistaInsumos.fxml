@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane fx:id="borderpaneInsumos" minHeight="-Infinity" prefHeight="720.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorIVistaInsumos">
+   <left>
+      <AnchorPane fx:id="anchorpaneCategorias" prefHeight="640.0" prefWidth="215.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXListView fx:id="listviewCategorias" layoutY="2.0" prefHeight="493.0" prefWidth="145.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <BorderPane fx:id="borderPaneTablaInsumos" prefHeight="750.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets right="10.0" />
+         </BorderPane.margin>
+      </BorderPane>
+   </center>
+   <top>
+      <BorderPane prefHeight="60.0" prefWidth="669.0" BorderPane.alignment="CENTER">
+         <left>
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="669.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="logo" fitHeight="43.0" fitWidth="195.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <JFXComboBox fx:id="comboboxSector" focusColor="#0098cd" onAction="#setearListItemCategorias" prefHeight="25.0" prefWidth="210.0" promptText="SECTOR">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXComboBox>
+                  <JFXTextField fx:id="textField_Buscar" disable="true" focusColor="#0098cd" onKeyReleased="#filtrarPorCoincidencias" prefHeight="25.0" prefWidth="210.0" promptText="Nombre de insumo">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+            </HBox>
+         </left>
+         <right>
+            <HBox alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="620.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="labelVencidos" prefHeight="35.0" prefWidth="430.0" text="La categoria ... presenta insumos sin fecha de vencimiento&#10;Por favor modifique en &lt;Gestion -&gt; Configuracion&gt;sus valores" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXButton fx:id="btnExportar" disable="true" onAction="#Exportar" prefHeight="24.0" prefWidth="76.0" style="-fx-background-color: #0098cd;" text="Exportar&#10;" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnActualizar" alignment="CENTER" onAction="#refreshInsumos" style="-fx-background-color: #0098cd;" text="Actualizar" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </right>
+      </BorderPane>
+   </top>
+</BorderPane>

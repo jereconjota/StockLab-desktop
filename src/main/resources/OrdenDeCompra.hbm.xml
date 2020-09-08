@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+	<class name="modelo.OrdenDeCompra" table="orden_de_compra">
+    	<id name="pkIdOrdenCompra" type="java.lang.Integer">
+            <column name="PK_Id_OrdenCompra" />
+            <generator class="increment" />
+        </id>
+        
+        <many-to-one name="usuario" class="modelo.Usuario" fetch="select">
+            <column name="FK_DNI_Usuario" not-null="true" />
+        </many-to-one>
+        <many-to-one name="proveedor" class="modelo.Proveedor" fetch="select">
+            <column name="FK_Id_Proveedor" not-null="true" />
+        </many-to-one>
+        
+        <property name="nroOrdenCompra" type="java.lang.Integer">
+            <column name="Nro_OrdenCompra" />
+        </property>
+        <property name="fechaOrdenCompra" type="date">
+            <column name="Fecha_OrdenCompra" length="10" />
+        </property>
+        <property name="observacionOrdenCompra" type="string">
+            <column name="Observacion_OrdenCompra" length="256" />
+        </property>
+        
+        <set name="detalleOrdenDeCompra" table="detalle_orden_de_compra" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FK_Id_OrdenCompra" not-null="true" />
+            </key>
+            <one-to-many class="modelo.DetalleOrdenDeCompra" />
+        </set>    
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+	<class name="modelo.Sucursal" table="sucursal">
+    	<id name="pkIdSucursal" type="java.lang.Integer">
+            <column name="PK_Id_Sucursal" />
+            <generator class="increment" />
+        </id>
+        <property name="nombreSucursal" type="string">
+            <column name="Nombre_Sucursal" length="45" />
+        </property>
+        <property name="direccionSucursal" type="string">
+            <column name="Direccion_Sucursal" length="45" />
+        </property>
+        <property name="telefonoSucursal" type="string">
+            <column name="Telefono_Sucursal" length="45" />
+        </property>
+       
+         <set name="insumo" table="insumo" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FK_Id_Sucursal" not-null="true" />
+            </key>
+            <one-to-many class="modelo.Insumo" />
+        </set>
+        
+        <set name="usuario" table="usuario" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FK_Id_Sucursal" not-null="true" />
+            </key>
+            <one-to-many class="modelo.Usuario" />
+        </set>
+        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import componentesCustom.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorIAltaUsuario">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="560.0" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="9.0">
+         <children>
+            <Label fx:id="lblAltaUser" layoutX="247.0" layoutY="6.0" text="Alta Usuario" AnchorPane.leftAnchor="247.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="55.0" text="Nombre:" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="70.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="163.0" text="Apellido:" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="140.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="243.0" text="DNI:" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="210.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="314.0" text="Nombre de Usuario:" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="280.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="321.0" text="Contraseña:" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="350.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <SoloLetrasTextField fx:id="txtFieldNombre" alignment="TOP_LEFT" focusColor="#0098cd" layoutX="184.0" layoutY="66.0" prefHeight="25.0" prefWidth="306.0" AnchorPane.leftAnchor="184.0" AnchorPane.topAnchor="66.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </SoloLetrasTextField>
+            <SoloLetrasTextField fx:id="txtFieldApellido" focusColor="#0098cd" layoutX="184.0" layoutY="136.0" prefHeight="25.0" prefWidth="306.0" AnchorPane.leftAnchor="184.0" AnchorPane.topAnchor="136.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </SoloLetrasTextField>
+            <NumberTextField fx:id="txtFieldDNI" focusColor="#0098cd" layoutX="184.0" layoutY="206.0" prefHeight="25.0" prefWidth="306.0" AnchorPane.leftAnchor="184.0" AnchorPane.topAnchor="206.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </NumberTextField>
+            <JFXTextField fx:id="txtFieldNombreUser" focusColor="#0098cd" layoutX="184.0" layoutY="276.0" prefHeight="25.0" prefWidth="306.0" AnchorPane.leftAnchor="184.0" AnchorPane.topAnchor="276.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtFieldPass" focusColor="#0098cd" layoutX="184.0" layoutY="346.0" prefHeight="25.0" prefWidth="306.0" AnchorPane.leftAnchor="184.0" AnchorPane.topAnchor="346.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </JFXTextField>
+            <Label fx:id="lblEstadoUser" layoutX="39.0" layoutY="421.0" text="Estado:" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="560.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblModifUser" layoutX="127.0" layoutY="11.0" text="Modificar Usuario" visible="false" AnchorPane.leftAnchor="247.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="420.0" text="Sector:" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="420.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cBoxUserASector" focusColor="#0098cd" layoutX="185.0" layoutY="417.0" prefHeight="25.0" prefWidth="306.0" promptText="SELECCIONE" AnchorPane.leftAnchor="184.0" AnchorPane.topAnchor="416.0" />
+            <JFXCheckBox fx:id="checkBoxAdmin" checkedColor="#0098cd" layoutX="186.0" layoutY="478.0" onAction="#habilitarComboSector" prefHeight="25.0" prefWidth="102.0" text="Si/No" AnchorPane.leftAnchor="174.0" AnchorPane.topAnchor="486.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </JFXCheckBox>
+            <Label fx:id="lblSuperUser" layoutX="39.0" layoutY="496.0" text="SuperUsuario:" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="490.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <HBox layoutX="172.0" layoutY="547.0" prefHeight="25.0" prefWidth="226.0" spacing="10.0" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="556.0">
+               <children>
+                  <JFXRadioButton fx:id="radioBtnActivo" layoutX="152.0" layoutY="561.0" onAction="#desactivarRadioSuspendido" prefHeight="25.0" text="Activo">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font></JFXRadioButton>
+                  <JFXRadioButton fx:id="radioBtnSuspendido" layoutX="296.0" layoutY="561.0" onAction="#desactivarRadioActivo" prefHeight="25.0" text="Suspendido">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font></JFXRadioButton>
+               </children>
+            </HBox>
+            <Label fx:id="lblMsjErrorNombre" layoutX="185.0" layoutY="100.0" textFill="RED" visible="false" AnchorPane.leftAnchor="184.0" AnchorPane.topAnchor="100.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMsjErrorApellido" layoutX="185.0" layoutY="175.0" textFill="RED" visible="false" AnchorPane.leftAnchor="184.0" AnchorPane.topAnchor="170.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMsjErrorDni" layoutX="185.0" layoutY="244.0" textFill="RED" visible="false" AnchorPane.leftAnchor="184.0" AnchorPane.topAnchor="240.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMsjErrorUser" layoutX="185.0" layoutY="311.0" textFill="RED" visible="false" AnchorPane.leftAnchor="184.0" AnchorPane.topAnchor="310.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMsjErrorContrasena" layoutX="185.0" layoutY="381.0" textFill="RED" visible="false" AnchorPane.leftAnchor="184.0" AnchorPane.topAnchor="380.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <HBox focusTraversable="true" layoutX="-31.0" layoutY="517.0" spacing="20.0" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="150.0">
+         <children>
+            <JFXButton fx:id="btnGuardarUser" buttonType="RAISED" layoutX="247.0" layoutY="450.0" onAction="#guardarAltaUser" style="-fx-background-color: #0098cd;" text="Guardar" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnCancelarUser" buttonType="RAISED" layoutX="318.0" layoutY="450.0" onAction="#cancelarAltaUser" style="-fx-background-color: #0098cd;" text="Cancelar" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <JFXButton fx:id="btnGuardarModifUser" buttonType="RAISED" layoutX="121.0" layoutY="559.0" onAction="#guardarModifUser" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: #0098cd;" text="Guardar" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="247.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+	<class name="modelo.Proveedor" table="proveedor">
+        <id name="pkIdProveedor" type="java.lang.Integer">
+            <column name="PK_Id_Proveedor" />
+            <generator class="increment" />
+        </id>
+        <property name="nroCuit" type="java.lang.String">
+            <column name="Nro_Cuit" length="50" not-null="true" />
+        </property>
+        <property name="nombreProveedor" type="java.lang.String">
+            <column name="Nombre_Proveedor" length="45" not-null="true" />
+        </property>
+        <property name="nroProveedor" type="java.lang.String">
+            <column name="Nro_Proveedor" length="50" />
+        </property>
+        <property name="direccionProveedor" type="java.lang.String">
+            <column name="Direccion_Proveedor" length="45" />
+        </property>
+        <property name="estadoProveedor" type="java.lang.String">
+            <column name="Estado_Proveedor" length="45" />
+        </property>
+        <property name="fechaAlta" type="date">
+            <column name="Fecha_Alta" length="10" />
+        </property>
+        <property name="fechaBaja" type="date">
+            <column name="Fecha_Baja" length="10" />
+        </property>
+        <property name="trabajaConRemito" type="string">
+            <column name="Trabaja_Con_Remito" length="45" />
+        </property>
+        <property name="nroDeOrdenDeCompra" type="java.lang.Integer">
+            <column name="NroDeOrdenDeCompra" />
+        </property>
+        
+        <set name="detalleFacturas" table="detalle_factura" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FK_Id_Proveedor" not-null="true" />
+            </key>
+            <one-to-many class="modelo.DetalleFactura" />
+        </set>
+        <set name="detalleRemitos" table="detalle_remito" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FK_Id_Proveedor" not-null="true" />
+            </key>
+            <one-to-many class="modelo.DetalleRemito" />
+        </set>
+		<set name="insumo" table="insumo" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FK_Id_Proveedor" not-null="true" />
+            </key>
+            <one-to-many class="modelo.Insumo" />
+        </set>    
+        </class>
+</hibernate-mapping>

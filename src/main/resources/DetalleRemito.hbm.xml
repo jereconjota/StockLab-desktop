@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+    <class name="modelo.DetalleRemito" table="detalle_remito">
+        <composite-id name="id" class="modelo.DetalleRemitoId">
+            <key-property name="pkNumDetalle" type="int">
+                <column name="PK_Num_Detalle" />
+            </key-property>
+            <key-property name="fkIdRemito" type="int">
+                <column name="FK_Id_Remito" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="insumo" class="modelo.Insumo" fetch="select">
+            <column name="FK_Id_Insumo" not-null="true" />
+        </many-to-one>
+        <many-to-one name="proveedor" class="modelo.Proveedor" fetch="select">
+            <column name="FK_Id_Proveedor" not-null="true" />
+        </many-to-one>
+        <many-to-one name="remito" class="modelo.Remito" update="false" insert="false" fetch="select">
+            <column name="FK_Id_Remito" not-null="true" />
+        </many-to-one>
+        <property name="cantidad" type="java.lang.Integer">
+            <column name="Cantidad" />
+        </property>
+    </class>
+</hibernate-mapping>

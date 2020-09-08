@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane_tablaPDP" maxHeight="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorITablaPDP">
+   <children>
+      <TableView fx:id="tablaPDP" maxHeight="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="tablaPDP_insumo" prefWidth="75.0" text="INSUMO" />
+            <TableColumn prefWidth="75.0" text="STOCK GENERAL">
+               <columns>
+                  <TableColumn fx:id="tablaPDP_stockActual" prefWidth="75.0" text="ACTUAL" />
+                  <TableColumn fx:id="tablaPDP_pdp" prefWidth="75.0" text="PUNTO DE PEDIDO" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="tablaPDP_proveedor" prefWidth="75.0" text="PROVEEDOR" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" />
+   </padding>
+</AnchorPane>

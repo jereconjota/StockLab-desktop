@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+	<class name="modelo.Movimiento" table="movimiento">
+    	<id name="idMov" type="java.lang.Integer">
+            <column name="Id_Mov" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="insumo" class="modelo.Insumo" fetch="select">
+            <column name="FK_Id_Insumo" not-null="true" />
+        </many-to-one>
+        <many-to-one name="usuario" class="modelo.Usuario" fetch="select">
+            <column name="FK_DNI_Usuario" not-null="true" />
+        </many-to-one>
+        <property name="nombreUsuario" type="string">
+            <column name="Nombre_Usuario" length="45" />
+        </property>
+        <property name="apellidoUsuario" type="string">
+            <column name="Apellido_Usuario" length="45" />
+        </property>
+        <property name="fechaMovimiento" type="timestamp">
+            <column name="Fecha_Movimiento" length="19" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="Descripcion" length="256" />
+        </property>    
+    </class>
+</hibernate-mapping>

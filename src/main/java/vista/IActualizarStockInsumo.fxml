@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import com.jfoenix.validation.*?>
+<?import jfxtras.labs.scene.control.grid.*?>
+<?import jfxtras.scene.layout.*?>
+<?import jfxtras.labs.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import componentesCustom.*?>
+
+<BorderPane fx:id="borderPaneStockInsumo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="943.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorIActualizarStockInsumo">
+   <top>
+      <Label fx:id="label_NombreInsumo" alignment="CENTER" prefHeight="58.0" prefWidth="558.0" text="INSUMO" textFill="#0098cd" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <GridPane alignment="CENTER" prefHeight="331.0" prefWidth="634.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="390.0" minWidth="10.0" prefWidth="342.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="455.0" minWidth="10.0" prefWidth="449.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="23.0" prefWidth="338.0" text="Nro. de Lote">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Label>
+            <JFXTextField fx:id="textField_nroLote" alignment="CENTER" focusColor="#0098cd" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></JFXTextField>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="28.0" prefHeight="23.0" prefWidth="346.0" text="Referencia" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Label>
+            <JFXTextField fx:id="textField_pdp" alignment="CENTER" focusColor="#0098cd" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="textFied_referencia" alignment="CENTER" focusColor="#0098cd" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="textFied_fechaVencimiento" alignment="CENTER" focusColor="#0098cd" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></JFXTextField>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="147.0" prefHeight="33.0" prefWidth="338.0" text="Fecha de uso" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Label>
+            <JFXTextField fx:id="textFied_fechaDeUso" alignment="CENTER" focusColor="#0098cd" layoutX="332.0" layoutY="146.0" prefHeight="3.0" prefWidth="317.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></JFXTextField>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="281.0" prefHeight="24.0" prefWidth="338.0" text="Cantidad de unidades utilizadas: " GridPane.rowIndex="9">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Label>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="340.0" text="Stock actual" textAlignment="CENTER" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Label>
+            <JFXTextField fx:id="textField_stockActual" alignment="CENTER" focusColor="#0098cd" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></JFXTextField>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="343.0" text="Fecha de Vencimiento" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="336.0" text="Punto de Pedido" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="24.0" prefWidth="338.0" text="Sucursal" GridPane.rowIndex="8">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <children>
+                  <JFXComboBox fx:id="comboBox_sucursal" focusColor="#0098cd" onAction="#habilitarBtnEnviar" prefHeight="27.0" prefWidth="226.0" promptText="Sucursal" />
+               </children>
+            </HBox>
+            <NumberTextField fx:id="textField_cantidadUsada" alignment="CENTER" focusColor="#0098cd" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="75.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </NumberTextField>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="336.0" text="Unidad de medida" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="textFied_unidadMedida" alignment="CENTER" focusColor="#0098cd" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <BorderPane.margin>
+            <Insets right="150.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="194.0" prefWidth="706.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnCancelar" layoutX="575.0" layoutY="154.0" onAction="#cancelarActualizarStock" prefHeight="26.0" prefWidth="105.0" style="-fx-background-color: #0098cd;" text="Cancelar" textFill="WHITE" AnchorPane.bottomAnchor="13.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="btnDecrementar" layoutX="462.0" layoutY="155.0" onAction="#decrementarStock" prefHeight="26.0" prefWidth="105.0" style="-fx-background-color: #0098cd;" text="Decrementar" textFill="WHITE" AnchorPane.bottomAnchor="13.0" AnchorPane.rightAnchor="125.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></JFXButton>
+            <Label fx:id="errorLabel" alignment="TOP_LEFT" layoutX="337.0" layoutY="-2.0" prefHeight="22.0" prefWidth="342.0" text="Label" textFill="#e80000" visible="false">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="textArea_observacion" layoutX="36.0" layoutY="-3.0" prefHeight="95.0" prefWidth="651.0" promptText="Observaciones..." wrapText="true" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="43.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextArea>
+            <JFXButton fx:id="btnEnviar" layoutX="642.0" layoutY="156.0" onAction="#enviarInsumo" prefHeight="26.0" prefWidth="105.0" style="-fx-background-color: #0098cd;" text="Enviar" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="13.0" AnchorPane.rightAnchor="125.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

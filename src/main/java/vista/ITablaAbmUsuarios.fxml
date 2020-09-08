@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorITablaAbmUsuarios">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Buscar" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtFieldBuscarUser" focusColor="#0098cd" layoutX="67.0" layoutY="10.0" onKeyReleased="#filtrarUsuarios" onMouseClicked="#manejadorObList" prefHeight="25.0" prefWidth="291.0" AnchorPane.leftAnchor="67.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tablaAbmUsers" layoutX="14.0" layoutY="58.0" prefHeight="516.0" prefWidth="534.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="58.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <columns>
+            <TableColumn fx:id="tablaAbmUsers_DNI" prefWidth="75.0" text="DNI" />
+            <TableColumn fx:id="tablaAbmUsers_Nombre" prefWidth="75.0" text="NOMBRE" />
+            <TableColumn fx:id="tablaAbmUsers_Apellido" prefWidth="75.0" text="APELLIDO" />
+            <TableColumn fx:id="tablaAbmUsers_NombreUser" prefWidth="75.0" text="NOMBRE USUARIO" />
+            <TableColumn fx:id="tablaAbmUsers_Pass" prefWidth="75.0" text="CONTRASEÑA" />
+            <TableColumn fx:id="tablaAbmUsers_Admin" prefWidth="75.0" text="ADMINISTRADOR" />
+            <TableColumn fx:id="tablaAbmUsers_Estado" prefWidth="75.0" text="ESTADO" />
+         </columns>
+      </TableView>
+      <JFXComboBox fx:id="cBoxSeleccioneUser" focusColor="#0098cd" layoutX="367.0" layoutY="10.0" prefHeight="25.0" prefWidth="200.0" promptText="SELECCIONE" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="10.0" />
+      <JFXComboBox fx:id="cBoxFiltroSectorUser" focusColor="#0098cd" layoutX="10.0" layoutY="10.0" onAction="#filtrarUsuariosPorSector" prefHeight="25.0" prefWidth="200.0" promptText="SECTOR" AnchorPane.leftAnchor="640.0" AnchorPane.topAnchor="10.0" />
+   </children>
+</AnchorPane>

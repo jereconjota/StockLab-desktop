@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import componentesCustom.*?>
+
+<BorderPane prefHeight="900.0" prefWidth="1278.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorIVistaOrdenDeCompra">
+   <top>
+      <BorderPane prefHeight="247.0" prefWidth="1130.0" style="-fx-border-color: #0098cd;" BorderPane.alignment="CENTER">
+         <top>
+            <Label prefHeight="50.0" text="EMITIR ORDEN DE COMPRA" textFill="#0098cd" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+         </top>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <left>
+            <VBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="180.0" text="Proveedor:">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="cBoxSeleccioneProvee" focusColor="#0098cd" onAction="#eventoCBoxSeleccioneProvee" prefHeight="25.0" prefWidth="260.0" promptText="SELECCIONE" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="180.0" text="CUIT Proveedor:">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtFieldNroCUIT" disable="true" focusColor="#0098cd" prefHeight="26.0" prefWidth="260.0">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="lblNriDeOrden" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="180.0" text="Numero de Orden: ">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <NumberTextField fx:id="txtFieldNroDeOrden" focusColor="#0098cd" prefHeight="26.0" prefWidth="260.0">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+<!--                            <HBox.margin> -->
+<!--                               <Insets /> -->
+<!--                            </HBox.margin> -->
+                        </NumberTextField>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+         </left>
+         <right>
+            <VBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="200.0" text="Fecha:">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblFechaCargaOrdenCompra" prefHeight="25.0" prefWidth="200.0" text="fecha OC" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="200.0" text="Solicitado por:">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblNombreUsuarioOrdenCompra" prefHeight="25.0" prefWidth="200.0" text="Nombre del usuario" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+         </right>
+         <center>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="lblFechaCargaFactura3" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="300.0" text="Laboratorio Dahinten" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFechaCargaFactura4" alignment="CENTER" prefHeight="25.0" prefWidth="300.0" text="España 578 - Comodoro Rivadavia - Chubut" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFechaCargaFactura5" alignment="CENTER" prefHeight="25.0" prefWidth="300.0" text="Tel: (0297) 4466006" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFechaCargaFactura6" alignment="CENTER" prefHeight="25.0" prefWidth="300.0" text="mail: compras@diagnoslab.com.ar" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFechaCargaFactura7" alignment="CENTER" prefHeight="25.0" prefWidth="300.0" text="CUIT: 20-13564432-4" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="1100.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="btnBuscar" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="BOTTOM" onAction="#mostrarPantallaSecundariaInsumos" style="-fx-background-color: #0098cd;" text="Buscar otros insumos" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <VBox prefHeight="200.0" prefWidth="1150.0" spacing="2.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="lblDetalleFactura" alignment="BOTTOM_LEFT" prefHeight="30.0" prefWidth="1150.0" text="Detalle de Orden de compra">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <TableView fx:id="detalleOrdenDeCompra" editable="true" prefHeight="546.0" prefWidth="1130.0">
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <columns>
+                        <TableColumn fx:id="detalleOrdenDeCompra_Insumo" editable="false" prefWidth="75.0" text="INSUMO" />
+                        <TableColumn fx:id="detalleOrdenDeCompra_Articulo" editable="false" prefWidth="75.0" text="ARTICULO" />
+                        <TableColumn fx:id="detalleOrdenDeCompra_Referencia" editable="false" prefWidth="75.0" text="REFERENCIA" />
+                        <TableColumn fx:id="detalleOrdenDeCompra_Sector" editable="false" prefWidth="75.0" text="SECTOR" />
+                        <TableColumn fx:id="detalleOrdenDeCompra_Categoria" editable="false" prefWidth="75.0" text="CATEGORIA" />
+                        <TableColumn fx:id="detalleOrdenDeCompra_Cantidad" prefWidth="75.0" text="CANTIDAD" />
+                        <TableColumn fx:id="detalleOrdenDeCompra_Unidades" prefWidth="75.0" text="UNIDADES" />
+                     </columns>
+                  </TableView>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+      </BorderPane>
+   </center>
+   <bottom>
+      <BorderPane prefHeight="66.0" prefWidth="1350.0" BorderPane.alignment="CENTER">
+         <right>
+            <HBox alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="283.0" spacing="10.0" BorderPane.alignment="CENTER_RIGHT">
+               <children>
+                  <JFXButton fx:id="btnGuardarOrden" buttonType="RAISED" onAction="#guardarOrdenDeCompra" prefHeight="26.0" prefWidth="6.0" style="-fx-background-color: #0098cd;" text="Guardar" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnExportarOrden" buttonType="RAISED" disable="true" onAction="#exportarOrdenDeCompra" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #0098cd;" text="Exportar y Guardar" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnCancelar" buttonType="RAISED" onAction="#cancelar" prefHeight="25.0" style="-fx-background-color: #0098cd;" text="Cancelar" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <BorderPane.margin>
+                  <Insets right="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </right>
+         <left>
+            <HBox alignment="CENTER_LEFT" prefHeight="66.0" prefWidth="969.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="btnLimpiarTabla" buttonType="RAISED" onAction="#limpiarTabla" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: #0098cd;" text="Limpiar tabla" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <TextArea fx:id="textAreaObservacion" prefHeight="66.0" prefWidth="874.0" promptText="Observacion" style="-fx-border-color: #0098cd;">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </TextArea>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </left>
+         <BorderPane.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </BorderPane.margin>
+      </BorderPane>
+   </bottom>
+</BorderPane>

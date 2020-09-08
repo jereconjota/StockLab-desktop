@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    
+    	<property name="hibernate.connection.characterEncoding">utf8</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/bdcsd?useSSL=false</property>
+        
+<!--    |||||||||||||||||||||||||||||||||||||||||     DIAGNOS     ||||||||||||||||||||||||||||||||||||||||||||||     -->
+
+<!--         <property name="hibernate.connection.url">jdbc:mysql://192.168.10.241:3306/bdcsd?useSSL=false</property> -->
+        
+<!--    |||||||||||||||||||||||||||||||||||||||||     KM 3     ||||||||||||||||||||||||||||||||||||||||||||||     -->
+
+<!--         <property name="hibernate.connection.url">jdbc:mysql://201.190.238.88:3306/bdcsd?useSSL=false</property> -->
+
+<!--    |||||||||||||||||||||||||||||||||||||||||     RADA TILLY     ||||||||||||||||||||||||||||||||||||||||||||||     -->
+
+<!--         <property name="hibernate.connection.url">jdbc:mysql://168.228.143.124:3306/bdcsd?useSSL=false</property> -->
+        	
+<!-- 		<property name="hibernate.connection.url">jdbc:mysql://200.32.59.82:3333/bdcsd?useSSL=false</property> -->
+        <property name="hibernate.connection.username">root</property>
+<!--         <property name="hibernate.connection.password">admin</property> -->
+<!-- 			 <property name="hibernate.connection.password">akatsuki06</property> -->
+        <property name="hibernate.connection.password">FiGo9091.</property>
+        
+		<!-- Connection Pool Size -->
+		<property name="hibernate.connection.pool_size">10</property>
+		
+		<!-- org.hibernate.HibernateException: No CurrentSessionContext configured! -->
+		<property name="hibernate.current_session_context_class">thread</property>
+		
+		<!-- Dialect is required to let Hibernate know the Database Type, MySQL, Oracle etc  
+			Hibernate 4 automatically figure out Dialect from Database Connection Metadata -->			
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>  
+		
+		
+<!-- 		<property name="hibernate.enable_lazy_load_no_trans">true</property> -->
+
+
+			<property name="connection.provider_class">
+			    org.hibernate.connection.C3P0ConnectionProvider
+			</property>
+			<property name="c3p0.acquire_increment">1</property>
+			<property name="c3p0.idle_test_period">3000</property><!-- seconds -->
+			<property name="c3p0.max_size">20</property>
+			<property name="c3p0.max_statements">50</property>
+			<property name="c3p0.min_size">5</property>
+			<property name="c3p0.timeout">300</property><!-- seconds -->
+			
+
+<!-- 		<property name="hibernate.search.autoregister_listeners">true</property> -->
+<!-- 		<property name="hibernate.validator.apply_to_ddl">false</property> -->
+
+		<!-- mapping file, we can use Bean annotations too --> 
+		<mapping resource="Proveedor.hbm.xml" />
+		<mapping resource="Movimiento.hbm.xml"/>
+		<mapping resource="Usuario.hbm.xml"/>
+		<mapping resource="Insumo.hbm.xml"/>
+		<mapping resource="Sector.hbm.xml"/>
+		<mapping resource="Categoria.hbm.xml"/>
+		<mapping resource="UsuarioSector.hbm.xml"/>
+		<mapping resource="Factura.hbm.xml"/>
+		<mapping resource="DetalleFactura.hbm.xml"/>
+		<mapping resource="Remito.hbm.xml"/>
+		<mapping resource="DetalleRemito.hbm.xml"/>
+		
+<!-- 		/////////////////////////////////////////////////////////// -->
+		<mapping resource="Sucursal.hbm.xml"/>
+		<mapping resource="OrdenDeCompra.hbm.xml"/>
+		<mapping resource="DetalleOrdenDeCompra.hbm.xml"/>
+<!-- 		/////////////////////////////////////////////////////////// -->
+                
+    </session-factory>
+</hibernate-configuration>

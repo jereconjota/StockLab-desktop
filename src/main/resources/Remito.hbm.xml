@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+    <class name="modelo.Remito" table="remito">
+        <id name="idRemito" type="java.lang.Integer">
+            <column name="Id_Remito" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="factura" class="modelo.Factura" fetch="select">
+            <column name="FK_Id_Factura" />
+        </many-to-one>
+        <property name="nroRemito" type="string">
+            <column name="Nro_Remito" length="45" />
+        </property>
+        <property name="fechaRemito" type="date">
+            <column name="Fecha_Remito" length="10" />
+        </property>
+        <property name="fechaCarga" type="date">
+            <column name="Fecha_Carga" length="10" />
+        </property>
+        <property name="observacionRemito" type="string">
+            <column name="Observacion_Remito" length="256" />
+        </property>
+        <set name="detalleRemitos" table="detalle_remito" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FK_Id_Remito" not-null="true" />
+            </key>
+            <one-to-many class="modelo.DetalleRemito" />
+        </set>
+        <set name="detalleFacturas" table="detalle_factura" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FK_Id_Remito" />
+            </key>
+            <one-to-many class="modelo.DetalleFactura" />
+        </set>
+    </class>
+</hibernate-mapping>

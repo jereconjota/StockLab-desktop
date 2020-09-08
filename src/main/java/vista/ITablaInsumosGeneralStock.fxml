@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1140.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorITablaInsumosGeneralStock">
+   <children>
+      <TableView fx:id="tablaInsumosGralStock" layoutX="52.0" layoutY="9.0" prefHeight="500.0" prefWidth="1140.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="tablaInsumosGral_Insumo" prefWidth="75.0" text="INSUMO" />
+            <TableColumn fx:id="tablaInsumosGral_UnidadMedida" prefWidth="75.0" text="UNIDAD MEDIDA" />
+          <TableColumn fx:id="tablaInsumosGral_StockGral" prefWidth="75.0" text="STOCK GRAL" />
+            <TableColumn fx:id="tablaInsumosGral_PDP" prefWidth="75.0" text="PDP" />
+            <TableColumn fx:id="tablaInsumosGral_Estado" prefWidth="75.0" text="ESTADO" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+	<class name="modelo.Insumo" table="insumo">
+    	<id name="idInsumo" type="java.lang.Integer">
+            <column name="Id_Insumo" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="sucursal" class="modelo.Sucursal" fetch="select">
+            <column name="FK_Id_Sucursal" not-null="true" />
+        </many-to-one>
+        <many-to-one name="categoria" class="modelo.Categoria" fetch="select">
+            <column name="FK_Id_Categoria" not-null="true" />
+        </many-to-one>
+        <many-to-one name="proveedor" class="modelo.Proveedor" fetch="select">
+            <column name="FK_Id_Proveedor" not-null="true" />
+        </many-to-one>
+        <property name="nroLote" type="string">
+            <column name="NroLote" length="45" />
+        </property>
+        <property name="nombreInsumo" type="string">
+            <column name="Nombre_Insumo" length="45" not-null="true" />
+        </property>
+        <property name="nroArticulo" type="string">
+            <column name="Nro_Articulo" length="45" />
+        </property>
+        <property name="referencia" type="string">
+            <column name="Referencia" length="45" />
+        </property>
+        <property name="fechaVencimiento" type="date">
+            <column name="Fecha_Vencimiento" length="10" />
+        </property>
+        <property name="ubicacion" type="string">
+            <column name="Ubicacion" length="45" />
+        </property>
+        <property name="temperatura" type="string">
+            <column name="Temperatura" length="45" />
+        </property>
+        <property name="precioInsumo" type="java.lang.Float">
+            <column name="Precio_Insumo" precision="12" scale="0" />
+        </property>
+        <property name="fechaUso" type="date">
+            <column name="Fecha_Uso" length="10" />
+        </property>
+        <property name="unidadMedida" type="string">
+            <column name="Unidad_Medida" length="45" />
+        </property>
+        <property name="estadoInsumo" type="string">
+            <column name="Estado_Insumo" length="45" />
+        </property>
+        <property name="pdp" type="java.lang.Integer">
+            <column name="PDP" />
+        </property>
+        <property name="stockActual" type="java.lang.Integer">
+            <column name="Stock_Actual" />
+        </property>
+        <property name="stockReal" type="java.lang.Integer">
+            <column name="Stock_Real" />
+        </property>
+        <property name="fechaIngreso" type="date">
+            <column name="Fecha_Ingreso" length="10" />
+        </property>
+        <property name="fechaBaja" type="date">
+            <column name="Fecha_Baja" length="10" />
+        </property>
+        <property name="nroPedido" type="java.lang.Integer">
+            <column name="Nro_Pedido" />
+        </property>
+        <set name="detalleFacturas" table="detalle_factura" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FK_Id_Insumo" not-null="true" />
+            </key>
+            <one-to-many class="modelo.DetalleFactura" />
+        </set>
+        <set name="movimientos" table="movimiento" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FK_Id_Insumo" not-null="true" />
+            </key>
+            <one-to-many class="modelo.Movimiento" />
+        </set>
+        <set name="detalleRemitos" table="detalle_remito" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FK_Id_Insumo" not-null="true" />
+            </key>
+            <one-to-many class="modelo.DetalleRemito" />
+        </set>   
+    </class>
+</hibernate-mapping>

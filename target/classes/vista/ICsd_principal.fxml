@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="borderPaneContenedor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorICsd_Principal">
+   <top>
+      <BorderPane fx:id="borderPanePpal" BorderPane.alignment="CENTER">
+         <top>
+            <MenuBar fx:id="menuBarPrincipal" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="Archivo">
+                  <items>
+                    <MenuItem fx:id="botonCerrarSesion" mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesion" />
+                        <MenuItem fx:id="botonCerrar" mnemonicParsing="false" onAction="#cerrarApp" text="Cerrar" />
+                  </items>
+                </Menu>
+                  <Menu fx:id="menuStock" mnemonicParsing="false" text="Stock">
+                     <items>
+                        <MenuItem fx:id="stockActualizarStock" mnemonicParsing="false" onAction="#mostrarPantallaStock" text="Actualizar stock" />
+                        <MenuItem fx:id="stockActualizarStock1" mnemonicParsing="false" onAction="#mostrarPantallaStock2" text="Actualizar stock 2" visible="false" />
+                        <MenuItem fx:id="stockVerPDP" mnemonicParsing="false" onAction="#mostrarPDP" text="Ver PDP alcanzados" />
+                        <MenuItem fx:id="stockVerVencidos" mnemonicParsing="false" onAction="#mostrarVencidos" text="Ver  insumos vencidos" />
+                        <MenuItem fx:id="stockVerMovimientos" mnemonicParsing="false" onAction="#mostrarMovimientos" text="Ver movimientos" />
+                        <MenuItem fx:id="stockOrdenDeCompra" mnemonicParsing="false" onAction="#mostrarOrdenDeCompra" text="Orden De Compra" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="menuFacturacion" mnemonicParsing="false" text="Facturacion">
+                    <items>
+                        <Menu mnemonicParsing="false" text="Factura">
+                          <items>
+                            <MenuItem fx:id="facturacionIngresarFactura" mnemonicParsing="false" onAction="#mostrarPantIngresoFactura" text="Ingresar factura" />
+                            <MenuItem fx:id="facturacionModificarFactura" mnemonicParsing="false" onAction="#modificarFactura" text="Modificar factura" />
+                              <MenuItem fx:id="facturacionVerFacturas" mnemonicParsing="false" onAction="#mostrarFacturas" text="Ver Facturas" />
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Remito">
+                          <items>
+                              <MenuItem fx:id="facturacionIngresarRemito" mnemonicParsing="false" onAction="#mostrarPantIngresoRemito" text="Ingresar remito" />
+                            <MenuItem fx:id="facturacionModificarRemito" mnemonicParsing="false" onAction="#modificarRemito" text="Modificar remito" />
+                              <MenuItem fx:id="facturacionVerRemitos" mnemonicParsing="false" onAction="#mostrarRemitos" text="Ver Remitos" />
+                          </items>
+                        </Menu>
+                        <MenuItem fx:id="facturacionVerMovimientos" disable="true" mnemonicParsing="false" onAction="#verMovimientosFacturacion" text="Ver movimientos de facturación" visible="false" />
+                    </items>
+                  </Menu>
+                <Menu fx:id="menuGestion" mnemonicParsing="false" text="Gestion">
+                  <items>
+                    <MenuItem fx:id="gestionConfiguracion" mnemonicParsing="false" onAction="#mostrarPantAdmin" text="Configuracion" />
+                  </items>
+                </Menu>
+                  <Menu fx:id="menuAyuda" mnemonicParsing="false" text="Ayuda">
+                     <items>
+                        <MenuItem fx:id="ayudaManualDeUsuario" mnemonicParsing="false" onAction="#abrirManual" text="Manual de Usuario" />
+                        <MenuItem fx:id="ayudaAcercaDe" mnemonicParsing="false" onAction="#acercaDe" text="Acerca de..." />
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </top>
+   <center>
+      <ImageView fx:id="logo" fitHeight="182.0" fitWidth="662.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

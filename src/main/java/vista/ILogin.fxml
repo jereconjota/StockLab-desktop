@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="449.0" style="-fx-border-color: #0098cd; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorILogin">
+   <children>
+      <Label alignment="CENTER" layoutX="94.0" layoutY="135.0" prefHeight="21.0" prefWidth="279.0" text="Ingresar Usuario y Contraseña" textAlignment="CENTER" AnchorPane.leftAnchor="91.0" AnchorPane.rightAnchor="79.0" AnchorPane.topAnchor="132.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtFieldUserLogin" focusColor="#0098cd" layoutX="91.0" layoutY="168.0" prefHeight="25.0" prefWidth="263.0" promptText="Usuario" AnchorPane.leftAnchor="91.0" AnchorPane.rightAnchor="81.0" AnchorPane.topAnchor="168.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="passFieldLogin" focusColor="#0098cd" layoutX="91.0" layoutY="221.0" onKeyPressed="#ingresarEnter" prefHeight="25.0" prefWidth="263.0" promptText="Contraseña" AnchorPane.leftAnchor="91.0" AnchorPane.rightAnchor="81.0" AnchorPane.topAnchor="221.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton fx:id="btnIngresarLogin" buttonType="RAISED" layoutX="195.0" layoutY="286.0" onAction="#verificarUser" onKeyPressed="#ingresarEnter" style="-fx-background-color: #0098cd;" text="Ingresar" textFill="WHITE" AnchorPane.bottomAnchor="48.0" AnchorPane.rightAnchor="168.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblError1" layoutX="91.0" layoutY="259.0" text="Usuario ó Contraseña" textFill="#e70505" visible="false" AnchorPane.leftAnchor="91.0">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblError3" layoutX="94.0" layoutY="259.0" prefHeight="17.0" prefWidth="320.0" text="Ya existe una sesion iniciada con este usuario" textFill="RED" visible="false">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblError2" layoutX="244.0" layoutY="257.0" text="INCORRECTOS!" textFill="#e70505" visible="false" AnchorPane.leftAnchor="244.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="logo" fitHeight="118.0" fitWidth="173.0" layoutX="141.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img" />
+         </image></ImageView>
+      <JFXButton fx:id="btnSalir" buttonType="RAISED" layoutX="282.0" layoutY="286.0" onAction="#CerrarApp" onKeyPressed="#cerrarEnter" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: #0098cd;" text="Salir" textFill="WHITE" AnchorPane.bottomAnchor="48.0" AnchorPane.rightAnchor="81.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="391.0" layoutY="348.0" prefHeight="15.0" prefWidth="47.0" text="v4.0.5">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

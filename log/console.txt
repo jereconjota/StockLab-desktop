@@ -1,0 +1,94 @@
+jun 05, 2019 12:42:12 AM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+jun 05, 2019 12:42:12 AM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {4.3.5.Final}
+jun 05, 2019 12:42:12 AM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000206: hibernate.properties not found
+jun 05, 2019 12:42:12 AM org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : javassist
+jun 05, 2019 12:42:12 AM org.hibernate.cfg.Configuration configure
+INFO: HHH000043: Configuring from resource: hibernate.cfg.xml
+jun 05, 2019 12:42:12 AM org.hibernate.cfg.Configuration getConfigurationInputStream
+INFO: HHH000040: Configuration resource: hibernate.cfg.xml
+jun 05, 2019 12:42:12 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: Proveedor.hbm.xml
+jun 05, 2019 12:42:12 AM org.hibernate.internal.util.xml.DTDEntityResolver resolveEntity
+WARN: HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+jun 05, 2019 12:42:12 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: Movimiento.hbm.xml
+jun 05, 2019 12:42:12 AM org.hibernate.internal.util.xml.DTDEntityResolver resolveEntity
+WARN: HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+jun 05, 2019 12:42:12 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: Usuario.hbm.xml
+jun 05, 2019 12:42:12 AM org.hibernate.internal.util.xml.DTDEntityResolver resolveEntity
+WARN: HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+jun 05, 2019 12:42:13 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: Insumo.hbm.xml
+jun 05, 2019 12:42:13 AM org.hibernate.internal.util.xml.DTDEntityResolver resolveEntity
+WARN: HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+jun 05, 2019 12:42:13 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: Sector.hbm.xml
+jun 05, 2019 12:42:13 AM org.hibernate.internal.util.xml.DTDEntityResolver resolveEntity
+WARN: HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+jun 05, 2019 12:42:13 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: Categoria.hbm.xml
+jun 05, 2019 12:42:13 AM org.hibernate.internal.util.xml.DTDEntityResolver resolveEntity
+WARN: HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+jun 05, 2019 12:42:13 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: UsuarioSector.hbm.xml
+jun 05, 2019 12:42:13 AM org.hibernate.internal.util.xml.DTDEntityResolver resolveEntity
+WARN: HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+jun 05, 2019 12:42:13 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: Factura.hbm.xml
+jun 05, 2019 12:42:13 AM org.hibernate.internal.util.xml.DTDEntityResolver resolveEntity
+WARN: HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+jun 05, 2019 12:42:13 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: DetalleFactura.hbm.xml
+jun 05, 2019 12:42:13 AM org.hibernate.internal.util.xml.DTDEntityResolver resolveEntity
+WARN: HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+jun 05, 2019 12:42:13 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: Remito.hbm.xml
+jun 05, 2019 12:42:13 AM org.hibernate.internal.util.xml.DTDEntityResolver resolveEntity
+WARN: HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+jun 05, 2019 12:42:13 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: DetalleRemito.hbm.xml
+jun 05, 2019 12:42:13 AM org.hibernate.internal.util.xml.DTDEntityResolver resolveEntity
+WARN: HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+jun 05, 2019 12:42:13 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: Sucursal.hbm.xml
+jun 05, 2019 12:42:13 AM org.hibernate.internal.util.xml.DTDEntityResolver resolveEntity
+WARN: HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+jun 05, 2019 12:42:13 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: OrdenDeCompra.hbm.xml
+jun 05, 2019 12:42:13 AM org.hibernate.internal.util.xml.DTDEntityResolver resolveEntity
+WARN: HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+jun 05, 2019 12:42:13 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: DetalleOrdenDeCompra.hbm.xml
+jun 05, 2019 12:42:13 AM org.hibernate.internal.util.xml.DTDEntityResolver resolveEntity
+WARN: HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+jun 05, 2019 12:42:13 AM org.hibernate.cfg.Configuration doConfigure
+INFO: HHH000041: Configured SessionFactory: null
+Hibernate Configuration loaded
+Hibernate serviceRegistry created
+jun 05, 2019 12:42:13 AM org.hibernate.engine.jdbc.connections.internal.ConnectionProviderInitiator instantiateExplicitConnectionProvider
+INFO: HHH000130: Instantiating explicit connection provider: org.hibernate.connection.C3P0ConnectionProvider
+jun 05, 2019 12:42:13 AM org.hibernate.c3p0.internal.C3P0ConnectionProvider configure
+INFO: HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://localhost:3306/bdcsd
+jun 05, 2019 12:42:13 AM org.hibernate.c3p0.internal.C3P0ConnectionProvider configure
+INFO: HHH000046: Connection properties: {user=root, password=****}
+jun 05, 2019 12:42:13 AM org.hibernate.c3p0.internal.C3P0ConnectionProvider configure
+INFO: HHH000006: Autocommit mode: false
+jun 05, 2019 12:42:13 AM com.mchange.v2.log.MLog <clinit>
+INFORMACIÓN: MLog clients using java 1.4+ standard logging.
+jun 05, 2019 12:42:13 AM com.mchange.v2.c3p0.C3P0Registry banner
+INFORMACIÓN: Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+jun 05, 2019 12:42:13 AM com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource getPoolManager
+INFORMACIÓN: Initializing c3p0 pool... com.mchange.v2.c3p0.PoolBackedDataSource@3bdeae63 [ connectionPoolDataSource -> com.mchange.v2.c3p0.WrapperConnectionPoolDataSource@a956fa5f [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, debugUnreturnedConnectionStackTraces -> false, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1bqub5va3agvhx35xiau3|6284b9ab, idleConnectionTestPeriod -> 3000, initialPoolSize -> 5, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 300, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 50, maxStatementsPerConnection -> 0, minPoolSize -> 5, nestedDataSource -> com.mchange.v2.c3p0.DriverManagerDataSource@4c98694e [ description -> null, driverClass -> null, factoryClassLocation -> null, identityToken -> 1bqub5va3agvhx35xiau3|c6e41d6, jdbcUrl -> jdbc:mysql://localhost:3306/bdcsd, properties -> {user=******, password=******} ], preferredTestQuery -> null, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false; userOverrides: {} ], dataSourceName -> null, factoryClassLocation -> null, identityToken -> 1bqub5va3agvhx35xiau3|7aebb5c5, numHelperThreads -> 3 ]
+jun 05, 2019 12:42:14 AM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+jun 05, 2019 12:42:14 AM org.hibernate.engine.jdbc.internal.LobCreatorBuilder useContextualLobCreation
+INFO: HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+jun 05, 2019 12:42:14 AM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000399: Using default transaction strategy (direct JDBC transactions)
+jun 05, 2019 12:42:14 AM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import jfxtras.scene.control.*?>
+<?import jfxtras.labs.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPaneMovimientos" maxHeight="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="1251.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorITablaMovimientos">
+   <children>
+      <TableView fx:id="tablaMovimientos" prefHeight="519.0" prefWidth="1251.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="tablaMovimientos_nombre" prefWidth="75.0" text="USUARIO" />
+          <TableColumn fx:id="tablaMovimientos_fecha" prefWidth="75.0" text="FECHA Y HORA" />
+            <TableColumn fx:id="tablaMovimientos_insumo" prefWidth="75.0" text="NRO DE LOTE" />
+            <TableColumn fx:id="tablaMovimientos_nombreInsumo" prefWidth="75.0" text="INSUMO" />
+            <TableColumn fx:id="tablaMovimientos_sucursal" prefWidth="75.0" text="SUCURSAL" />
+            <TableColumn fx:id="tablaMovimientos_datos" minWidth="0.0" prefWidth="0.0" text="DATOS" />
+            <TableColumn fx:id="tablaMovimientos_descripcion" prefWidth="350.99981689453125" text="DESCRIPCION" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" />
+   </padding>
+</AnchorPane>

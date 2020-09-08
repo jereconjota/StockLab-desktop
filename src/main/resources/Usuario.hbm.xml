@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+	<class name="modelo.Usuario" table="usuario">
+        <id name="pkDniUsuario" type="int">
+            <column name="PK_DNI_Usuario" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="sucursal" class="modelo.Sucursal" fetch="select">
+            <column name="FK_Id_Sucursal" not-null="true" />
+        </many-to-one>
+        <property name="user" type="string">
+            <column name="User" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="Nombre" length="45" not-null="true" />
+        </property>
+        <property name="apellido" type="string">
+            <column name="Apellido" length="45" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="Password" length="45" not-null="true" />
+        </property>
+        <property name="estadoUsuario" type="string">
+            <column name="Estado_Usuario" length="45" />
+        </property>
+        <property name="admin" type="string">
+            <column name="Admin" length="45" />
+        </property>
+        <property name="mail" type="string">
+            <column name="Mail" length="45" />
+        </property>
+        <set name="movimientos" table="movimiento" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FK_DNI_Usuario" not-null="true" />
+            </key>
+            <one-to-many class="modelo.Movimiento" />
+        </set>
+        <set name="usuarioSectors" table="usuario_sector" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FK_DNI_Usuario" not-null="true" />
+            </key>
+            <one-to-many class="modelo.UsuarioSector" />
+        </set> 
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="366.0" prefWidth="435.0" style="-fx-border-color: #0098cd; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorIAcercaDe">
+   <children>
+      <ImageView fx:id="logoStockLab" fitHeight="168.0" fitWidth="250.0" layoutX="98.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/iconoStockLab.png" />
+         </image></ImageView>
+      <Label layoutX="46.0" layoutY="180.0" prefHeight="17.0" prefWidth="355.0" text="STOCK-LAB™ v4.0.5 es producida por FiGo Desarrollos">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="logoFiGo" fitHeight="60.0" fitWidth="56.0" layoutX="195.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/logofigo.png" />
+         </image></ImageView>
+      <Label layoutX="132.0" layoutY="286.0" text="figodesarrollos@gmail.com">
+         <font>
+            <Font name="Arial Italic" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAceptar" layoutX="183.0" layoutY="320.0" onAction="#aceptar" style="-fx-background-color: #0098cd;" text="Aceptar" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

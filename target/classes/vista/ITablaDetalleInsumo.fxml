@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorpaneinsumos" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorITablaDetalleInsumo">
+   <children>
+      <TableView fx:id="tablaInsumos" fixedCellSize="0.0" layoutX="-152.0" layoutY="41.0" maxHeight="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="1016.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="tablaInsumos_nombre" prefWidth="125.52014845609665" text="NOMBRE" />
+            <TableColumn fx:id="tablaInsumos_nroArticulo" minWidth="0.0" prefWidth="53.47991180419922" text="NRO&#10;ARTICULO" />
+          <TableColumn fx:id="tablaInsumos_referencia" prefWidth="92.64070129394531" text="REFERENCIA" />
+            <TableColumn fx:id="tablaInsumos_nrolote" prefWidth="139.35931396484375" text="NRO. LOTE" />
+            <TableColumn maxWidth="163.76129150390625" minWidth="6.0" prefWidth="140.9598388671875" text="STOCK">
+               <columns>
+                  <TableColumn fx:id="tablaInsumos_stockActual" minWidth="6.0" prefWidth="69.59561157226562" style="-fx-font-size:11px;" text="ACTUAL" />
+                  <TableColumn fx:id="tablaInsumos_stockGeneral" minWidth="6.0" prefWidth="73.15594482421875" style="-fx-font-size:11px;" text="GENERAL" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="tablaInsumos_pdp" prefWidth="40.99755859375" text="PDP" />
+            <TableColumn fx:id="tablaInsumos_unidadDeMedida" prefWidth="89.67840576171875" text="UNIDAD DE&#10; MEDIDA" />
+            <TableColumn fx:id="tablaInsumos_fechaDeUso" prefWidth="106.037841796875" text="ULTIMA &#10;FECHA DE USO" />
+            <TableColumn fx:id="tablaInsumos_fechaDeVencimiento" prefWidth="111.19854736328125" text="FECHA DE &#10;VENCIMIENTO" />
+            <TableColumn prefWidth="114.0" text="UBICACION" visible="false" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

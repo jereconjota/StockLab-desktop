@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane fx:id="borderPanePDP" prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorIVistaPDP">
+   <top>
+      <BorderPane prefHeight="60.0" prefWidth="381.0" BorderPane.alignment="CENTER">
+         <left>
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="1048.0" BorderPane.alignment="CENTER_LEFT">
+               <children>
+                  <ImageView fx:id="logo" fitHeight="43.0" fitWidth="195.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <JFXComboBox fx:id="comboBoxProveedor" focusColor="#0098cd" onAction="#filtroProveedor" prefHeight="25.0" prefWidth="210.0" promptText="PROVEEDOR">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXComboBox>
+                  <JFXComboBox fx:id="comboBoxSector" focusColor="#0098cd" onAction="#filtroSector" prefHeight="25.0" prefWidth="210.0" promptText="SECTOR">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXComboBox>
+                  <JFXComboBox fx:id="comboBoxCategoria" focusColor="#0098cd" onAction="#filtroCategoria" prefHeight="25.0" prefWidth="210.0" promptText="CATEGORIA">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXComboBox>
+                  <JFXTextField fx:id="textFieldBuscar" focusColor="#0098cd" onKeyReleased="#filtrarPorCoincidencias" onMouseClicked="#manejadorObList" prefHeight="25.0" prefWidth="210.0" promptText="Nombre de insumo">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin></JFXTextField>
+               </children>
+               <BorderPane.margin>
+                  <Insets right="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </left>
+         <right>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="btnLimpiarFiltros" onAction="#limpiarFiltros" prefHeight="45.0" prefWidth="75.0" style="-fx-background-color: #0098cd;" text="Limpiar&#10;filtros" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnExportarExcel" onAction="#exportarExcel" prefHeight="45.0" prefWidth="75.0" style="-fx-background-color: #0098cd;" text="Exportar" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </right>
+      </BorderPane>
+   </top>
+   <center>
+      <BorderPane fx:id="borderTabla" prefHeight="450.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+         <center>
+            <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="1290.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="btnAgregarAorden" onAction="#agregarAordenDeCompra" prefHeight="26.0" prefWidth="211.0" style="-fx-background-color: #0098cd;" text="Agregar" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" right="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </center></BorderPane>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnLimpiarTablaDetalle" onAction="#limpiarTablaDetalle" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: #0098cd;" text="Limpiar tabla" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnExportarOC" onAction="#exportarAordenDeCompra" prefHeight="26.0" prefWidth="211.0" style="-fx-background-color: #0098cd;" text="Exportar a Orden de Compra" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <BorderPane.margin>
+            <Insets right="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>

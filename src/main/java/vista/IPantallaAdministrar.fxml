@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import com.jfoenix.validation.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorIPantallaAdmin">
+   <center>
+      <TabPane fx:id="tabPaneAdmin" minHeight="-Infinity" minWidth="-Infinity" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab fx:id="tabSectores" text="Sectores">
+               <content>
+                  <BorderPane fx:id="borderABMsectores" prefHeight="200.0" prefWidth="200.0">
+                     <left>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Pane layoutX="12.0" layoutY="10.0" prefHeight="218.0" prefWidth="176.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <VBox layoutX="48.0" layoutY="60.0" spacing="30.0">
+                                       <children>
+                                          <JFXButton fx:id="btnAltaSector" buttonType="RAISED" layoutX="75.0" layoutY="45.0" onAction="#mostrarAltaSector" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #0098CD;" text="Alta" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="14.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnBajaSector" buttonType="RAISED" layoutX="75.0" layoutY="88.0" onAction="#darBajaSector" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #0098CD;" text="Baja" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnModifSector" buttonType="RAISED" layoutX="75.0" layoutY="128.0" onAction="#mostrarModifSector" style="-fx-background-color: #0098CD;" text="Modificar" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                    <Label layoutX="51.0" layoutY="14.0" text="OPCIONES">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </left>
+                  </BorderPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabCategorias" text="Categorias">
+               <content>
+                  <BorderPane fx:id="borderABMcategorias" prefHeight="200.0" prefWidth="200.0">
+                     <left>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Pane layoutX="12.0" layoutY="10.0" prefHeight="218.0" prefWidth="176.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <Label layoutX="51.0" layoutY="14.0" text="OPCIONES">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <VBox layoutX="48.0" layoutY="60.0" spacing="30.0">
+                                       <children>
+                                          <JFXButton fx:id="btnAltaCategoria" buttonType="RAISED" layoutX="75.0" layoutY="45.0" onAction="#mostrarAltaCategoria" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #0098CD;" text="Alta" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="14.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnBajaCategoria" buttonType="RAISED" layoutX="75.0" layoutY="88.0" onAction="#darBajaCategoria" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #0098CD;" text="Baja" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnModifCategoria" buttonType="RAISED" layoutX="75.0" layoutY="128.0" onAction="#mostrarModifCategoria" style="-fx-background-color: #0098CD;" text="Modificar" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </left>
+                  </BorderPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabInsumos" text="Insumos">
+               <content>
+                  <BorderPane fx:id="borderABMinsumos" prefHeight="200.0" prefWidth="200.0">
+                     <left>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Pane layoutX="12.0" layoutY="10.0" prefHeight="334.0" prefWidth="176.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <Label layoutX="51.0" layoutY="14.0" text="OPCIONES">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <VBox layoutX="48.0" layoutY="60.0" spacing="30.0">
+                                       <children>
+                                          <JFXButton fx:id="btnAltaInsumo" buttonType="RAISED" layoutX="75.0" layoutY="45.0" onAction="#mostrarAltaInsumo" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #0098CD;" text="Alta" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="14.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnBajaInsumo" buttonType="RAISED" layoutX="75.0" layoutY="88.0" onAction="#darBajaInsumo" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #0098CD;" text="Baja" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnModifInsumo" buttonType="RAISED" layoutX="75.0" layoutY="128.0" onAction="#mostrarModifInsumo" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #0098CD;" text="Modificar" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnVerInsumo" buttonType="RAISED" onAction="#verInsumos" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #0098CD;" text="Ver" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnAtras" buttonType="RAISED" onAction="#mostrarTablaInsumoGral" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #0098CD;" text="Atras" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </left>
+                  </BorderPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabProveedores" text="Proveedores">
+               <content>
+                  <BorderPane fx:id="borderABMproveedores" prefHeight="200.0" prefWidth="200.0">
+                     <left>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Pane layoutX="12.0" layoutY="10.0" prefHeight="218.0" prefWidth="176.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <Label layoutX="51.0" layoutY="14.0" text="OPCIONES">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <VBox layoutX="48.0" layoutY="60.0" prefHeight="26.0" prefWidth="77.0" spacing="30.0">
+                                       <children>
+                                          <JFXButton fx:id="btnAltaProveedor" buttonType="RAISED" layoutX="62.0" layoutY="65.0" onAction="#mostrarAltaProveedor" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #0098CD;" text="Alta" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnBajaProveedor" buttonType="RAISED" layoutX="62.0" layoutY="109.0" onAction="#darBajaProveedor" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #0098CD;" text="Baja" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnModifProveedor" buttonType="RAISED" layoutX="62.0" layoutY="151.0" onAction="#mostrarModifProveedor" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #0098CD;" text="Modificar" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </left>
+                  </BorderPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabUsuarios" text="Usuarios">
+               <content>
+                  <BorderPane fx:id="borderABMusuario" prefHeight="200.0" prefWidth="200.0">
+                     <left>
+                        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Pane layoutX="12.0" layoutY="10.0" prefHeight="218.0" prefWidth="176.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <Label layoutX="51.0" layoutY="14.0" text="OPCIONES">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <VBox layoutX="48.0" layoutY="60.0" spacing="30.0">
+                                       <children>
+                                          <JFXButton fx:id="btnAltaUsuario" buttonType="RAISED" layoutX="75.0" layoutY="45.0" onAction="#mostrarAltaUser" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #0098CD;" text="Alta" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="14.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnBajaUsuario" buttonType="RAISED" layoutX="75.0" layoutY="88.0" onAction="#darBajaUser" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #0098CD;" text="Baja" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnModifUsuario" buttonType="RAISED" layoutX="75.0" layoutY="128.0" onAction="#mostrarModifUser" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #0098CD;" text="Modificar" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </left>
+                  </BorderPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
